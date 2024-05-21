@@ -1,0 +1,6 @@
+services:
+  training.preprocess_subscriber:
+    class: Drupal\training\EventSubscriber\TrainingSubscriber
+    arguments: ['@messenger', '@current_user']
+    tags:
+      - { name: event_subscriber }

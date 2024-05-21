@@ -1,0 +1,7 @@
+training.theme_hook_test_page:
+  path: '/theme-hook-test-page'
+  defaults:
+    _controller: '\Drupal\training\Controller\TrainingController::testPage'
+    _title: 'HOOK_THEME training examples'
+  requirements:
+    _permission: 'access content'
