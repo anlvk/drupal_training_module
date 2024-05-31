@@ -45,3 +45,16 @@ function training_preprocess_html(&$variables) {
   // Call it.
   $dispatcher->dispatch($event, TrainingPreprocessEvent::PREPROCESS_HTML);
 }
+
+
+/**
+ * Implements hook_page_attachments_alter().
+ *
+ * Add module libraries to a page of another module.
+ */
+function training_page_attachments_alter(array &$attachments) {
+  $route = \Drupal::routeMatch();
+  if ($route->getRouteName() == 'cache_content.settings') {
+    $attachments['#attached']['library'][] = 'training/training-library';
+  }
+}

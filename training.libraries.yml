@@ -1,0 +1,7 @@
+training-library:
+  version: 1.x
+  css:
+    theme:
+      css/training.css: {}
+  js:
+    js/training.js: {}
